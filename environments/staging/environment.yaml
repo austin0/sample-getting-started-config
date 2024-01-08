@@ -43,21 +43,21 @@ app:
   #    region: us-east-1
   version: "d020f97e-4c09-4ca4-94b6-bd9f9c72bb91"
 # probes
-probes:
-    readiness:
-      failureThreshold: 12
-      httpGet:
-        path: /health/ready
-        port: 9080
-      initialDelaySeconds: 5
-      periodSeconds: 10
-    liveness:
-      failureThreshold: 12
-      httpGet:
-        path: /health/live
-        port: 9080
-      initialDelaySeconds: 15
-      periodSeconds: 20
+  probes:
+      readiness:
+        failureThreshold: 12
+        httpGet:
+          path: /health/ready
+          port: 9080
+        initialDelaySeconds: 5
+        periodSeconds: 10
+      liveness:
+        failureThreshold: 12
+        httpGet:
+          path: /health/live
+          port: 9080
+        initialDelaySeconds: 15
+        periodSeconds: 20
 
 # dynamic scaling
 # scaling to 0
