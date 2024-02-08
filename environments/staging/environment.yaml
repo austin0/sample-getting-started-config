@@ -41,23 +41,22 @@ app:
   #    arn: arn:aws:logs:region:account-id:destination:destination_name
   #    logGroup: myLogGroup
   #    region: us-east-1
-  version: "d020f97e-4c09-4ca4-94b6-bd9f9c72bb91"
-# probes
+  version: "9d73113d-6911-4322-a118-d77ea1bf3ef9"
+  # probes
   probes:
-      readiness:
-        failureThreshold: 12
-        httpGet:
-          path: /health/ready
-          port: 9080
-        initialDelaySeconds: 5
-        periodSeconds: 10
-      liveness:
-        failureThreshold: 12
-        httpGet:
-          path: /health/live
-          port: 9080
-        initialDelaySeconds: 15
-        periodSeconds: 20
-
+    readiness:
+      failureThreshold: 12
+      httpGet:
+        path: /health/ready
+        port: 9080
+      initialDelaySeconds: 5
+      periodSeconds: 10
+    liveness:
+      failureThreshold: 12
+      httpGet:
+        path: /health/live
+        port: 9080
+      initialDelaySeconds: 15
+      periodSeconds: 20
 # dynamic scaling
 # scaling to 0
